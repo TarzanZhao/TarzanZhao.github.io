@@ -51,7 +51,7 @@ I am a Ph.D. student of Computer Science at [NYU Courant](https://cs.nyu.edu/hom
 
 <u>Hexu Zhao</u>, \*Haoyang Weng, \*Daohan Lu, Ang Li, Jinyang Li, Aurojit Panda, Saining Xie
 
-*ICLR2025*&nbsp;&nbsp;[:academicons-arxiv: arXiv](https://arxiv.org/abs/2406.18533)&nbsp;&nbsp;[:fontawesome-brands-github: Code](https://github.com/nyu-systems/Grendel-GS)&nbsp;&nbsp;[:fontawesome-solid-link: Project Page](https://daohanlu.github.io/scaling-up-3dgs/)
+*ICLR2025 Oral*&nbsp;&nbsp;[:academicons-arxiv: arXiv](https://arxiv.org/abs/2406.18533)&nbsp;&nbsp;[:fontawesome-brands-github: Code](https://github.com/nyu-systems/Grendel-GS)&nbsp;&nbsp;[:fontawesome-solid-link: Project Page](https://daohanlu.github.io/scaling-up-3dgs/)
 
 **On Optimizing the Communication of Model Parallelism**
 
