@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-# Hexu Zhao ![正装照-低分辨jpeg](https://github.com/TarzanZhao/TarzanZhao.github.io/assets/45677459/c696c62c-2238-41aa-ba9d-03658ec04d8a){ align=right style="width:5.0em; margin-left: 7.5em; margin-top: 0.5em; border-radius: 1em;"}
+# Hexu Zhao ![Hexu Zhao](https://github.com/TarzanZhao/TarzanZhao.github.io/assets/45677459/c696c62c-2238-41aa-ba9d-03658ec04d8a){ align=right style="width:5.0em; margin-left: 7.5em; margin-top: 0.5em; border-radius: 1em;"}
 
 *:fontawesome-solid-building: Office: [424, 60 5th Ave, New York, NY 10011](https://maps.app.goo.gl/N7m2fM5EbM3TToB79)*
 
