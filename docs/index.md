@@ -15,7 +15,7 @@ hide:
 
 ## Bio
 
-I am a Ph.D. student of Computer Science at [NYU Courant](https://cs.nyu.edu/home/index.html), advised by Prof. [Jinyang Li](https://www.news.cs.nyu.edu/~jinyang/) and Prof. [Aurojit Panda](https://cs.nyu.edu/~apanda/). My research interest is in machine learning systems, with a current focus on distributed machine learning. Recently, I have been building the [Grendel-GS](https://github.com/nyu-systems/Grendel-GS) system for the emerging and promising neural rendering method: 3D Gaussian Splatting. Previously, I obtained my bachelor’s degree in 2023 from Honored Yao Class, Tsinghua University. I was a Research Assistant at MBZUAI advised by Prof. [Eric Xing](http://www.cs.cmu.edu/~epxing/) and Prof. [Hao Zhang](https://cseweb.ucsd.edu/~haozhang/) in Spring 2022. Before that I was advised by Prof. [Yang Yuan](http://people.iiis.tsinghua.edu.cn/~yuanyang/en.html) in Tsinghua on various AI+healthcare topics. 
+I am a Ph.D. student of Computer Science at [NYU Courant](https://cs.nyu.edu/home/index.html), advised by Prof. [Jinyang Li](https://jinyangli.github.io) and Prof. [Aurojit Panda](https://cs.nyu.edu/~apanda/). My research interest is in machine learning systems, with a current focus on distributed machine learning. Recently, I have been building the [Grendel-GS](https://github.com/nyu-systems/Grendel-GS) system for the emerging and promising neural rendering method: 3D Gaussian Splatting. Previously, I obtained my bachelor’s degree in 2023 from Honored Yao Class, Tsinghua University. 
 
 ## News
 
