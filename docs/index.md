@@ -6,7 +6,42 @@ hide:
 
 # Hexu Zhao
 
-<div id="spark-viewer" style="width: 300px; height: 300px; border: 2px solid #ddd; border-radius: 15px; margin: 0 0 0 auto; float: right; margin-left: 2em; margin-top: -5em; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"></div>
+<div id="spark-viewer"></div>
+
+<style>
+#spark-viewer {
+  width: 300px;
+  height: 300px;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  margin: 0 0 0 auto;
+  float: right;
+  margin-left: 2em;
+  margin-top: -5em;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 手机端响应式设计 */
+@media (max-width: 768px) {
+  #spark-viewer {
+    width: 80%;
+    max-width: 300px;
+    height: 250px;
+    float: none;
+    margin: 1em auto;
+    margin-top: 0;
+    display: block;
+  }
+}
+
+/* 小屏手机 */
+@media (max-width: 480px) {
+  #spark-viewer {
+    width: 90%;
+    height: 200px;
+  }
+}
+</style>
 
 <script type="importmap">
 {
@@ -23,9 +58,19 @@ import { SplatMesh } from "@sparkjsdev/spark";
 
 const container = document.getElementById('spark-viewer');
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000); // 1:1 aspect ratio for square container
+const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-renderer.setSize(300, 300);
+
+// 动态设置渲染器尺寸
+function updateRendererSize() {
+  const width = container.offsetWidth;
+  const height = container.offsetHeight;
+  renderer.setSize(width, height);
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
+}
+
+updateRendererSize();
 renderer.setClearColor(0x000000, 0); // Transparent background
 container.appendChild(renderer.domElement);
 
@@ -71,6 +116,9 @@ function animate() {
   renderer.render(scene, camera);
 }
 animate();
+
+// 响应式调整
+window.addEventListener('resize', updateRendererSize);
 </script>
 
 *:fontawesome-solid-building: Office: [424, 60 5th Ave, New York, NY 10011](https://maps.app.goo.gl/N7m2fM5EbM3TToB79)*
