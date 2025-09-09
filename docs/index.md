@@ -4,7 +4,74 @@ hide:
   - toc
 ---
 
-# Hexu Zhao ![](https://github.com/TarzanZhao/TarzanZhao.github.io/assets/45677459/c696c62c-2238-41aa-ba9d-03658ec04d8a){ align=right style="width:5.0em; margin-left: 7.5em; margin-top: 0.5em; border-radius: 1em;"}
+# Hexu Zhao
+
+<div id="spark-viewer" style="width: 300px; height: 300px; border: 2px solid #ddd; border-radius: 15px; margin: 0 0 0 auto; float: right; margin-left: 2em; margin-top: -5em; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"></div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.174.0/three.module.js",
+    "@sparkjsdev/spark": "https://sparkjs.dev/releases/spark/0.1.8/spark.module.js"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from "three";
+import { SplatMesh } from "@sparkjsdev/spark";
+
+const container = document.getElementById('spark-viewer');
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000); // 1:1 aspect ratio for square container
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setSize(300, 300);
+renderer.setClearColor(0x000000, 0); // Transparent background
+container.appendChild(renderer.domElement);
+
+// 使用 Spark 示例中的蝴蝶模型
+const splatURL = "https://sparkjs.dev/assets/splats/butterfly.spz";
+const butterfly = new SplatMesh({ url: splatURL });
+butterfly.quaternion.set(1, 0, 0, 0);
+butterfly.position.set(0, 0, -3);
+scene.add(butterfly);
+
+// 添加基本的鼠标控制
+let mouseDown = false;
+let mouseX = 0;
+let mouseY = 0;
+
+container.addEventListener('mousedown', (e) => {
+  mouseDown = true;
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+container.addEventListener('mouseup', () => {
+  mouseDown = false;
+});
+
+container.addEventListener('mousemove', (e) => {
+  if (mouseDown) {
+    const deltaX = e.clientX - mouseX;
+    const deltaY = e.clientY - mouseY;
+    butterfly.rotation.y += deltaX * 0.01;
+    butterfly.rotation.x += deltaY * 0.01;
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  }
+});
+
+// 渲染循环
+function animate() {
+  requestAnimationFrame(animate);
+  if (!mouseDown) {
+    butterfly.rotation.y += 0.005; // 自动旋转
+  }
+  renderer.render(scene, camera);
+}
+animate();
+</script>
 
 *:fontawesome-solid-building: Office: [424, 60 5th Ave, New York, NY 10011](https://maps.app.goo.gl/N7m2fM5EbM3TToB79)*
 
