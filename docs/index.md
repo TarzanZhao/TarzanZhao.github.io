@@ -74,12 +74,21 @@ updateRendererSize();
 renderer.setClearColor(0x000000, 0); // Transparent background
 container.appendChild(renderer.domElement);
 
-// 使用 Spark 示例中的蝴蝶模型
-const splatURL = "https://sparkjs.dev/assets/splats/butterfly.spz";
-const butterfly = new SplatMesh({ url: splatURL });
-butterfly.quaternion.set(1, 0, 0, 0);
-butterfly.position.set(0, 0, -3);
-scene.add(butterfly);
+// 设置相机位置：从Y轴负方向向原点拍摄
+// 调整距离以获得最佳视角 (可根据模型大小调整此值)
+const cameraDistance = 0.7;
+camera.position.set(-cameraDistance, 0.2, 0.02);
+camera.lookAt(0, 0.1, 0);
+
+// 使用本地的点云模型 (直接读取PLY文件)
+const splatURL = "assets/IMG_8856_ds2_mcmc_prune_sh1.ply";
+const pointCloud = new SplatMesh({ url: splatURL });
+pointCloud.quaternion.set(1, 0, 0, 0);
+pointCloud.position.set(0, 0, -0.02);
+// 上下对称：沿Y轴镜像翻转
+// pointCloud.scale.y = -1;
+pointCloud.scale.z = -1;
+scene.add(pointCloud);
 
 // 添加基本的鼠标控制
 let mouseDown = false;
@@ -100,19 +109,33 @@ container.addEventListener('mousemove', (e) => {
   if (mouseDown) {
     const deltaX = e.clientX - mouseX;
     const deltaY = e.clientY - mouseY;
-    butterfly.rotation.y += deltaX * 0.01;
-    butterfly.rotation.x += deltaY * 0.01;
+    // 从Y轴负方向观察，调整旋转轴以获得直观的控制
+    pointCloud.rotation.y += deltaX * 0.01;
+    pointCloud.rotation.z += deltaY * 0.01;
     mouseX = e.clientX;
     mouseY = e.clientY;
   }
 });
 
 // 渲染循环
+const initialCameraPosition = { x: -cameraDistance, y: 0.2, z: 0.02 };
+const radius = Math.sqrt(initialCameraPosition.x * initialCameraPosition.x + initialCameraPosition.z * initialCameraPosition.z);
+// 计算初始角度，确保第一帧显示原始视角
+const initialAngle = Math.atan2(initialCameraPosition.z, initialCameraPosition.x);
+let time = initialAngle;
+
 function animate() {
   requestAnimationFrame(animate);
+  
   if (!mouseDown) {
-    butterfly.rotation.y += 0.005; // 自动旋转
+    // 相机自动沿y轴旋转
+    time += 0.01;
+    camera.position.x = Math.cos(time) * radius;
+    camera.position.z = Math.sin(time) * radius;
+    camera.position.y = initialCameraPosition.y; // 保持y位置不变
+    camera.lookAt(0, 0.1, 0); // 始终看向固定点
   }
+  
   renderer.render(scene, camera);
 }
 animate();
