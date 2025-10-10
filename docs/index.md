@@ -157,7 +157,7 @@ I am a Ph.D. student of Computer Science at [NYU Courant](https://cs.nyu.edu/hom
 
 ## News
 
-[01/2025] I will join NVIDIA Toronto AI Lab as a Research Scientist Intern in 2025 Summer. See you in Santa Clara!
+[01/2025] I will join [NVIDIA Spatial Intelligence Lab](https://research.nvidia.com/labs/sil/) as a Research Scientist Intern in 2025 Summer. See you in Santa Clara!
 
 [03/2024] I will join Microsoft DeepSpeed Team as a Research Scientist Intern in 2024 Summer. See you in Seattle!
 
@@ -176,6 +176,12 @@ I am a Ph.D. student of Computer Science at [NYU Courant](https://cs.nyu.edu/hom
 ***B.Eng. in Computer Science (Honored Yao Class)***
 
 ## Experience
+
+**NVIDIA Spatial Intelligence Lab**![Image title](images/nvidia.png){ align=right style="height:5em; border-radius: 0.5em;"}
+
+*May. 2025 – Now*
+
+*Research Scientist Intern*
 
 **Microsoft Deepspeed**![Image title](images/ms.png){ align=right style="height:5em; border-radius: 0.5em;"}
 
