@@ -153,7 +153,7 @@ window.addEventListener('resize', updateRendererSize);
 
 ## Bio
 
-I am a Ph.D. student of Computer Science at [NYU Courant](https://cs.nyu.edu/home/index.html), advised by Prof. [Jinyang Li](https://jinyangli.github.io) and Prof. [Aurojit Panda](https://cs.nyu.edu/~apanda/). My research interest is in machine learning systems, with a current focus on distributed machine learning. Recently, I have been building the [Grendel-GS](https://github.com/nyu-systems/Grendel-GS) system for the emerging and promising neural rendering method: 3D Gaussian Splatting. Previously, I obtained my bachelor’s degree in 2023 from Honored Yao Class, Tsinghua University. 
+I am a Ph.D. student of Computer Science at [NYU Courant](https://cs.nyu.edu/home/index.html), advised by Prof. [Jinyang Li](https://jinyangli.github.io) and Prof. [Aurojit Panda](https://cs.nyu.edu/~apanda/). My research focuses on the emerging niche of **systems for Gaussian Splatting**. From a systems perspective, I leverage both distributed training and rendering kernel optimization techniques. From a workload perspective, I optimize for both static and dynamic 3D reconstruction. Previously, I obtained my bachelor’s degree in 2023 from Honored Yao Class, Tsinghua University. 
 
 ## News
 
