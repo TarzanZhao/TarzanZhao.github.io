@@ -153,7 +153,7 @@ window.addEventListener('resize', updateRendererSize);
 
 ## Bio
 
-I am a Ph.D. student of Computer Science at [NYU Courant](https://cs.nyu.edu/home/index.html), advised by Prof. [Jinyang Li](https://jinyangli.github.io) and Prof. [Aurojit Panda](https://cs.nyu.edu/~apanda/). My research focuses on the emerging niche of **systems for Gaussian Splatting**. From a systems perspective, I leverage both distributed training and rendering kernel optimization techniques. From a workload perspective, I optimize for both static and dynamic 3D reconstruction. Previously, I obtained my bachelor’s degree in 2023 from Honored Yao Class, Tsinghua University. 
+I am a Ph.D. student of Computer Science at [NYU Courant](https://cs.nyu.edu/home/index.html), advised by Prof. [Jinyang Li](https://jinyangli.github.io) and Prof. [Aurojit Panda](https://cs.nyu.edu/~apanda/). My research focuses on the emerging niche of **System for Gaussian Splatting**. From a systems perspective, I leverage both distributed training and rendering kernel optimization techniques. From a workload perspective, I optimize for both static and dynamic 3D reconstruction. Previously, I obtained my bachelor’s degree in 2023 from Honored Yao Class, Tsinghua University. 
 
 ## News
 
@@ -177,7 +177,7 @@ I am a Ph.D. student of Computer Science at [NYU Courant](https://cs.nyu.edu/hom
 
 ## Experience
 
-**NVIDIA Spatial Intelligence Lab**![Image title](images/nvidia.png){ align=right style="height:5em; border-radius: 0.5em;"}
+**NVIDIA Spatial Intelligence Lab**![Image title](images/NVLogo_2D.jpg){ align=right style="height:5em; border-radius: 0.5em;"}
 
 *May. 2025 – Now*
 
