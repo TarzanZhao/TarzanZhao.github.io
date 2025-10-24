@@ -191,6 +191,12 @@ I am a Ph.D. student of Computer Science at [NYU Courant](https://cs.nyu.edu/hom
 
 ## Publications
 
+**CLM: Removing the GPU Memory Barrier for 3D Gaussian Splatting**
+
+<u>\*Hexu Zhao</u>, \*Xiwen Min, Xiaoteng Liu, Moonjun Gong, Yiming Li, Ang Li, Saining Xie, Jinyang Li, Aurojit Panda
+
+*ASPLOS 2026*
+
 **On Scaling Up 3D Gaussian Splatting Training**
 
 <u>Hexu Zhao</u>, \*Haoyang Weng, \*Daohan Lu, Ang Li, Jinyang Li, Aurojit Panda, Saining Xie
