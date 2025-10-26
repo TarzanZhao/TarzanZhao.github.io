@@ -153,7 +153,9 @@ window.addEventListener('resize', updateRendererSize);
 
 ## Bio
 
-I am a Ph.D. student of Computer Science at [NYU Courant](https://cs.nyu.edu/home/index.html), advised by Prof. [Jinyang Li](https://jinyangli.github.io) and Prof. [Aurojit Panda](https://cs.nyu.edu/~apanda/). My research focuses on Machine Learning System, especially the emerging niche of **System for Gaussian Splatting**. From a systems perspective, I leverage both distributed computation and kernel optimization techniques. From a workload perspective, I optimize for both static and dynamic scene reconstruction. Previously, I obtained my bachelor’s degree in 2023 from Honored Yao Class, Tsinghua University. 
+I am a Ph.D. student of Computer Science at [NYU Courant](https://cs.nyu.edu/home/index.html), advised by Prof. [Jinyang Li](https://jinyangli.github.io) and Prof. [Aurojit Panda](https://cs.nyu.edu/~apanda/). My research focuses on Machine Learning System, especially the emerging niche of **System for Gaussian Splatting**. From a systems perspective, I leverage both distributed computation and kernel optimization techniques. From a workload perspective, I optimize for both static and dynamic scene reconstruction. Previously, I obtained my bachelor’s degree in 2023 from Honored Yao Class, Tsinghua University. In high school, I taught myself to win [Zibo City](https://en.wikipedia.org/wiki/Zibo)’s first National Informatics Olympiad gold medal (NOI2018). 
+
+_"I’ve always tried to find and take on the small things in this world that I’m meant, more than anyone else, to do."_
 
 ## News
 
