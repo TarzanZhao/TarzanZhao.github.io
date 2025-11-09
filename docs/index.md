@@ -149,7 +149,7 @@ window.addEventListener('resize', updateRendererSize);
 *:fontawesome-solid-inbox: Work Email: [hz3496 [at] nyu [dot] edu](mailto:hz3496@nyu.edu)*
 
 
-<span style=font-size:2em;">[:academicons-cv:](assets/CV-Hexu Zhao_20241103.pdf) [:fontawesome-solid-envelope:](mailto:hz3496@nyu.edu) [:academicons-google-scholar:](https://scholar.google.com/citations?hl=en&user=ylKFMAkAAAAJ) [:academicons-dblp:](https://dblp.org/pid/293/9714.html) [:fontawesome-brands-github:](https://github.com/TarzanZhao) [:fontawesome-brands-linkedin:](https://www.linkedin.com/in/hexu-zhao-203304244/) [:fontawesome-brands-zhihu:](https://www.zhihu.com/people/zhao-he-xu-61)</span>
+<span style=font-size:2em;">[:academicons-cv:](assets/HexuZhao_CV_20251105.pdf) [:fontawesome-solid-envelope:](mailto:hz3496@nyu.edu) [:academicons-google-scholar:](https://scholar.google.com/citations?hl=en&user=ylKFMAkAAAAJ) [:academicons-dblp:](https://dblp.org/pid/293/9714.html) [:fontawesome-brands-github:](https://github.com/TarzanZhao) [:fontawesome-brands-linkedin:](https://www.linkedin.com/in/hexu-zhao-203304244/) [:fontawesome-brands-zhihu:](https://www.zhihu.com/people/zhao-he-xu-61)</span>
 
 ## Bio
 
