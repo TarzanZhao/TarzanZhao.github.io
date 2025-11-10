@@ -198,7 +198,7 @@ _"Iâ€™ve always tried to find and take on the small things in this world that Iâ
 
 <u>\*Hexu Zhao</u>, \*Xiwen Min, Xiaoteng Liu, Moonjun Gong, Yiming Li, Ang Li, Saining Xie, Jinyang Li, Aurojit Panda
 
-*ASPLOS 2026*
+*ASPLOS 2026*&nbsp;&nbsp;[:academicons-arxiv: arXiv](https://arxiv.org/abs/2511.04951)
 
 **On Scaling Up 3D Gaussian Splatting Training**
 
