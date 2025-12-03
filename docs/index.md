@@ -200,7 +200,7 @@ _"I’ve always had a taste for stepping away from the mainstream — but not to
 
 <u>\*Hexu Zhao</u>, \*Xiwen Min, Xiaoteng Liu, Moonjun Gong, Yiming Li, Ang Li, Saining Xie, Jinyang Li, Aurojit Panda
 
-*ASPLOS 2026*&nbsp;&nbsp;[:academicons-arxiv: arXiv](https://arxiv.org/abs/2511.04951)
+*ASPLOS 2026*&nbsp;&nbsp;[:academicons-arxiv: arXiv](https://arxiv.org/abs/2511.04951)&nbsp;&nbsp;[:fontawesome-brands-github: Code](https://github.com/nyu-systems/CLM-GS)&nbsp;&nbsp;[:fontawesome-solid-link: Project Page](https://tarzanzhao.github.io/CLM-GS/)
 
 **On Scaling Up 3D Gaussian Splatting Training**
 
