@@ -160,11 +160,14 @@ _"I’ve always had a taste for stepping away from the mainstream — but not to
 
 <!-- _"I’ve always tried to find and take on the small things in this world that I’m meant, more than anyone else, to do."_  -->
 
-## News
+<details>
+<summary><strong>News</strong></summary>
 
 [01/2025] I will join [NVIDIA Spatial Intelligence Lab](https://research.nvidia.com/labs/sil/) as a Research Scientist Intern in 2025 Summer. See you in Santa Clara!
 
 [03/2024] I will join Microsoft DeepSpeed Team as a Research Scientist Intern in 2024 Summer. See you in Seattle!
+
+</details>
 
 ## Education
 
@@ -184,7 +187,7 @@ _"I’ve always had a taste for stepping away from the mainstream — but not to
 
 **NVIDIA Spatial Intelligence Lab**![Image title](images/NVLogo_2D.jpg){ align=right style="height:5em; border-radius: 0.5em;"}
 
-*May. 2025 – Now*
+*May. 2025 – Dec. 2025*
 
 *Research Scientist Intern*
 
@@ -195,6 +198,13 @@ _"I’ve always had a taste for stepping away from the mainstream — but not to
 *Research Scientist Intern*
 
 ## Publications
+
+**Scaling Point-based Differentiable Rendering for Large-scale Reconstruction**
+
+<u>Hexu Zhao</u>, Xiaoteng Liu, Xiwen Min, Jianhao Huang, Youming Deng, Yanfei Li, Ang Li, Jinyang Li, Aurojit Panda
+
+*In submission*&nbsp;&nbsp;[:academicons-arxiv: arXiv](assets/gaian_1222.pdf)&nbsp;&nbsp;
+<!-- [:fontawesome-brands-github: Code](https://github.com/nyu-systems/CLM-GS)&nbsp;&nbsp;[:fontawesome-solid-link: Project Page](https://tarzanzhao.github.io/CLM-GS/) -->
 
 **CLM: Removing the GPU Memory Barrier for 3D Gaussian Splatting**
 
