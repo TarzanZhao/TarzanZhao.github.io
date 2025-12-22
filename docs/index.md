@@ -203,7 +203,8 @@ _"I’ve always had a taste for stepping away from the mainstream — but not to
 
 <u>Hexu Zhao</u>, Xiaoteng Liu, Xiwen Min, Jianhao Huang, Youming Deng, Yanfei Li, Ang Li, Jinyang Li, Aurojit Panda
 
-*In submission*&nbsp;&nbsp;[:academicons-arxiv: arXiv](assets/gaian_1222.pdf)&nbsp;&nbsp;
+*In submission*&nbsp;&nbsp;[:fontawesome-solid-file-pdf: PDF](assets/gaian_1222.pdf)&nbsp;&nbsp;
+<!-- *In submission*&nbsp;&nbsp;[:academicons-arxiv: arXiv](assets/gaian_1222.pdf)&nbsp;&nbsp; -->
 <!-- [:fontawesome-brands-github: Code](https://github.com/nyu-systems/CLM-GS)&nbsp;&nbsp;[:fontawesome-solid-link: Project Page](https://tarzanzhao.github.io/CLM-GS/) -->
 
 **CLM: Removing the GPU Memory Barrier for 3D Gaussian Splatting**
