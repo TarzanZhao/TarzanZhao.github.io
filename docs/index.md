@@ -163,9 +163,9 @@ _"I’ve always had a taste for stepping away from the mainstream — but not to
 <details>
 <summary><strong>News</strong></summary>
 
-[01/2025] I will join [NVIDIA Spatial Intelligence Lab](https://research.nvidia.com/labs/sil/) as a Research Scientist Intern in 2025 Summer. See you in Santa Clara!
+<p><strong>[01/2025]</strong> I will join <a href="https://research.nvidia.com/labs/sil/">NVIDIA Spatial Intelligence Lab</a> as a Research Scientist Intern in 2025 Summer. See you in Santa Clara!</p>
 
-[03/2024] I will join Microsoft DeepSpeed Team as a Research Scientist Intern in 2024 Summer. See you in Seattle!
+<p><strong>[03/2024]</strong> I will join Microsoft DeepSpeed Team as a Research Scientist Intern in 2024 Summer. See you in Seattle!</p>
 
 </details>
 
