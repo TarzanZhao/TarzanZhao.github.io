@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexu Zhao</title>
+    <style>
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 { font-size: 1.8em; margin-bottom: 0.3em; }
+        .cn-name { font-family: "KaiTi", "楷体", "STKaiti", "AR PL UKai CN", serif; }
+        h2 { font-size: 1.3em; margin-top: 1.8em; border-bottom: 1px solid #ccc; padding-bottom: 0.2em; }
+        a { color: #5588aa; text-decoration: none; }
+        a:hover { color: #336688; text-decoration: underline; }
+        .info { color: #555; margin-bottom: 1.5em; }
+        .info a { color: #555; margin-right: 12px; }
+        .info a:hover { color: #0066cc; }
+        .quote { font-style: italic; color: #666; margin: 1em 0; }
+        .pub { margin-bottom: 1.2em; }
+        .pub .title { font-weight: bold; }
+        .pub .venue { font-style: italic; }
+        .pub .links a { margin-right: 8px; font-size: 0.9em; }
+        .exp { margin-bottom: 0.8em; }
+        .exp .role { color: #555; }
+        .exp .project { color: #444; }
+        .news-item { margin-bottom: 0.4em; }
+        .news-date { font-weight: bold; }
+        .story p { margin: 0.4em 0; }
+        .tabs { margin-bottom: 1.5em; }
+        .tabs a { margin-right: 16px; color: #999; font-size: 1.1em; cursor: pointer; padding-bottom: 2px; font-weight: bold; }
+        .tabs a.active { color: #333; border-bottom: 2px solid #333; }
+        .tabs a:hover { color: #333; text-decoration: none; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+    </style>
+</head>
+<body>
+
+<h1>Hexu Zhao <span class="cn-name">赵和旭</span></h1>
+
+<div class="info">
+    Email: hz3496 [at] nyu [dot] edu<br>
+    <br>
+    <a href="https://scholar.google.com/citations?hl=en&user=ylKFMAkAAAAJ">[Google Scholar]</a>
+    <a href="https://github.com/TarzanZhao">[GitHub]</a>
+    <a href="https://www.linkedin.com/in/hexu-zhao-203304244/">[LinkedIn]</a>
+</div>
+
+<div class="tabs">
+    <a class="active" onclick="switchTab('research')">About Research</a>
+    <a onclick="switchTab('me')">About Me (as I see it)</a>
+</div>
+
+<div id="research" class="tab-content active">
+
+<p>
+I am a Ph.D. student of Computer Science at <a href="https://cs.nyu.edu/home/index.html">NYU Courant</a>,
+advised by Prof. <a href="https://jinyangli.github.io">Jinyang Li</a> and Prof. <a href="https://cs.nyu.edu/~apanda/">Aurojit Panda</a>.
+My research focuses on Machine Learning Systems, especially <b>System for Gaussian Splatting</b>.
+From a systems perspective, I leverage both distributed computation and kernel optimization techniques.
+From a workload perspective, I optimize for both static and dynamic scene reconstruction.
+Previously, I obtained my bachelor's degree in 2023 from Honored Yao Class, Tsinghua University.
+</p>
+
+<h2>Education</h2>
+
+<div class="exp">
+    <b>New York University Courant Institute</b>, Sept. 2023 – Present<br>
+    <span class="role">Ph.D. in Computer Science, advised by Prof. <a href="https://jinyangli.github.io">Jinyang Li</a> and Prof. <a href="https://cs.nyu.edu/~apanda/">Aurojit Panda</a></span>
+</div>
+
+<div class="exp">
+    <b>Tsinghua University</b>, Sept. 2019 – June 2023<br>
+    <span class="role">B.Eng. in Computer Science (Honored Yao Class)</span>
+</div>
+
+<h2>Industry Internships</h2>
+
+<div class="exp">
+    <b>NVIDIA Spatial Intelligence Lab</b>, May 2025 – Dec. 2025<br>
+    <span class="role">Research Scientist Intern</span><br>
+    <span class="project"><b>Project:</b> Large-scale 3D point cloud perception system built on Point Transformer V3 and <a href="https://openvdb.github.io/fvdb-core/">fVDB</a>.</span>
+</div>
+
+<div class="exp">
+    <b>Microsoft DeepSpeed</b>, May 2024 – Aug. 2024<br>
+    <span class="role">Research Scientist Intern</span><br>
+    <span class="project"><b>Project:</b> Fine-grained in-kernel overlapping of GEMM and collective communication.</span>
+</div>
+
+<h2>Publications</h2>
+
+<div class="pub">
+    <div class="title">Scaling Point-based Differentiable Rendering for Large-scale Reconstruction</div>
+    <u>Hexu Zhao</u>, Xiaoteng Liu, Xiwen Min, Jianhao Huang, Youming Deng, Yanfei Li, Ang Li, Jinyang Li, Aurojit Panda<br>
+    <span class="venue">In submission</span>
+    <span class="links"><a href="https://arxiv.org/abs/2512.20017">[arXiv]</a></span>
+</div>
+
+<div class="pub">
+    <div class="title">CLM: Removing the GPU Memory Barrier for 3D Gaussian Splatting</div>
+    *<u>Hexu Zhao</u>, *Xiwen Min, Xiaoteng Liu, Moonjun Gong, Yiming Li, Ang Li, Saining Xie, Jinyang Li, Aurojit Panda<br>
+    <span class="venue">ASPLOS 2026</span>
+    <span class="links">
+        <a href="https://arxiv.org/abs/2511.04951">[arXiv]</a>
+        <a href="https://github.com/nyu-systems/CLM-GS">[Code]</a>
+        <a href="https://tarzanzhao.github.io/CLM-GS/">[Project]</a>
+    </span>
+</div>
+
+<div class="pub">
+    <div class="title">On Scaling Up 3D Gaussian Splatting Training</div>
+    <u>Hexu Zhao</u>, *Haoyang Weng, *Daohan Lu, Ang Li, Jinyang Li, Aurojit Panda, Saining Xie<br>
+    <span class="venue">ICLR 2025 Oral</span>
+    <span class="links">
+        <a href="https://arxiv.org/abs/2406.18533">[arXiv]</a>
+        <a href="https://github.com/nyu-systems/Grendel-GS">[Code]</a>
+        <a href="https://daohanlu.github.io/scaling-up-3dgs/">[Project]</a>
+    </span>
+</div>
+
+<div class="pub">
+    <div class="title">On Optimizing the Communication of Model Parallelism</div>
+    *Yonghao Zhuang, *<u>Hexu Zhao</u>, Lianmin Zheng, Zhuohan Li, Eric P. Xing, Qirong Ho, Joseph E. Gonzalez, Ion Stoica, Hao Zhang<br>
+    <span class="venue">MLSys 2023</span>
+    <span class="links"><a href="https://arxiv.org/pdf/2211.05322.pdf">[arXiv]</a></span>
+</div>
+
+<div class="pub">
+    <div class="title">Fully Hyperbolic Neural Networks</div>
+    Weize Chen, Xu Han, Yankai Lin, <u>Hexu Zhao</u>, Zhiyuan Liu, Peng Li, Maosong Sun, Jie Zhou<br>
+    <span class="venue">ACL 2022</span>
+    <span class="links"><a href="https://arxiv.org/pdf/2105.14686.pdf">[arXiv]</a></span>
+</div>
+
+<div class="pub">
+    <div class="title">Development of a Doctor-in-the-loop Interpretation Framework for Insulin Titration in Diabetes</div>
+    *Haowei He, *Zhen Ying, Biao Li, Yujuan Fan, Ping Wang, Jiaping Lu, Liming Wu, <u>Hexu Zhao</u>, Xiaoying Li, Yang Yuan, Ying Chen<br>
+    <span class="venue">In submission</span>
+</div>
+
+</div>
+
+<div id="me" class="tab-content">
+    <ul>
+        <li>I'm deeply curious about all aspects of this wonderful world and want to truly experience and understand them. My background has been in computer science so far, but I will someday also learn business, human nature, and more (by diving in, not just reading). I also want to live in different places around the world (living, not travelling as a tourist).</li>
+        <li>I've never dreamed of becoming a textbook-worthy scientist, a first-place athlete, or a power-wielding governor or minister, etc.</li>
+        <li>I am a minimalist. I like clean solutions in work, a simple lifestyle, and straightforward relationships...</li>
+        <li>I'm into health because I really want to live a bit longer.</li>
+        <li>Lately, I've been feeling happy and at peace.</li>
+        <!-- <li>I have a deep urge to understand things thoroughly, but once I do, I always seem to lose interest in doing them again.</li> -->
+        <!-- <li>I'm into technology, business, and stories (movies, etc.). Less so art and literature.</li> -->
+
+    </ul>
+    <!-- <p><i>"I've always had a taste for stepping away from the mainstream — but not too far — to look for ideas that are overlooked yet full of potential, in research, in life, and beyond."</i></p> -->
+    <details>
+    <summary><h2 style="display:inline">My Past</h2></summary>
+    <div class="story">
+    <p>I was born in a small city (<a href="https://en.wikipedia.org/wiki/Zibo">Zibo</a>, Shandong) in China.</p>
+    <p>In my childhood, I only cared about playing, carefree, with more than enough joy and love from my parents.</p>
+    <p>In middle school, I had exactly the same joys and troubles as any other Chinese teenager going through puberty.</p>
+    <p>In high school, I set out to become Zibo's first-ever National Olympiad in Informatics gold medalist — by self-studying and giving up on Gaokao prep entirely — and after going through enormous pain and pressure, I made it. I got to experience being a labeled "local legend," which pretty much cured me of caring about external titles and rankings.</p>
+    <p>In college, I was at Tsinghua Yao Class. Driven by broad curiosity, I tried everything I had the chance to try, but never went deep on anything. Just enough to get by (for example, I graduated). I also met all kinds of people and had many unforgettable conversations. It was a time of feeling a bit lost.</p>
+    <p>During my PhD at NYU, I experienced another stretch of passion. I found a niche in Gaussian Splatting systems that most people had overlooked, and went all in for 2.5 years. I got to experience the full cycle of research and the AI academic world, pretty interesting. I also had a great life in NYC along the way.</p>
+    <p>Each of these shaped me in ways I didn't expect. I can't wait to see what finds me next...</p>
+    </div>
+    </details>
+</div>
+
+<script>
+function switchTab(tab) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tabs a').forEach(el => el.classList.remove('active'));
+    document.getElementById(tab).classList.add('active');
+    document.querySelector('.tabs a[onclick*="' + tab + '"]').classList.add('active');
+}
+</script>
+
+</body>
+</html>
