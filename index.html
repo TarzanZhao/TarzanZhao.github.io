@@ -38,18 +38,152 @@
         .tabs a:hover { color: #333; text-decoration: none; }
         .tab-content { display: none; }
         .tab-content.active { display: block; }
+        .top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 24px;
+        }
+        .profile-head {
+            flex: 1;
+            min-width: 0;
+        }
+        .ai-proxy-box {
+            border: 1px solid #d8d8d8;
+            border-radius: 6px;
+            padding: 9px;
+            margin-top: 0;
+            background: #fafafa;
+            width: 300px;
+            flex: 0 0 300px;
+            line-height: 1.35;
+        }
+        .ai-proxy-title {
+            font-weight: bold;
+            font-size: 0.98em;
+        }
+        .ai-proxy-subtitle {
+            color: #666;
+            font-size: 0.82em;
+        }
+        .ai-proxy-note {
+            color: #666;
+            font-size: 0.82em;
+            line-height: 1.35;
+            margin: 0.35em 0 0.7em;
+        }
+        .ai-proxy-messages {
+            height: 96px;
+            overflow-y: auto;
+            border: 1px solid #e2e2e2;
+            background: #fff;
+            padding: 7px;
+            margin-bottom: 8px;
+            font-size: 0.82em;
+            text-align: left;
+        }
+        .ai-proxy-message {
+            margin: 0 0 0.45em;
+            white-space: pre-wrap;
+            text-align: left;
+        }
+        .ai-proxy-suggestion {
+            color: #888;
+            line-height: 1.35;
+            cursor: pointer;
+        }
+        .ai-proxy-suggestion:hover {
+            color: #666;
+        }
+        .ai-proxy-message .speaker {
+            font-weight: bold;
+            color: #444;
+            font-size: 1em;
+        }
+        .thinking-dots .dot {
+            animation: thinking-dot 1.2s infinite ease-in-out;
+            opacity: 0.25;
+        }
+        .thinking-dots .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .thinking-dots .dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        @keyframes thinking-dot {
+            0%, 80%, 100% { opacity: 0.25; }
+            40% { opacity: 1; }
+        }
+        .ai-proxy-input-row {
+            display: flex;
+            gap: 6px;
+        }
+        .ai-proxy-input-row input {
+            flex: 1;
+            min-width: 0;
+            padding: 5px 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 0.82em;
+        }
+        .ai-proxy-input-row button {
+            padding: 5px 9px;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            background: #f2f2f2;
+            color: #333;
+            cursor: pointer;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 0.82em;
+        }
+        .ai-proxy-input-row button:disabled {
+            color: #888;
+            cursor: default;
+        }
+        @media (max-width: 760px) {
+            .top-row {
+                display: block;
+            }
+            .ai-proxy-box {
+                width: auto;
+                margin: 1em 0 1.5em;
+            }
+        }
     </style>
 </head>
 <body>
 
-<h1>Hexu Zhao <span class="cn-name">赵和旭</span></h1>
+<div class="top-row">
+    <div class="profile-head">
+        <h1>Hexu Zhao <span class="cn-name">赵和旭</span></h1>
 
-<div class="info">
-    Email: hz3496 [at] nyu [dot] edu<br>
-    <br>
-    <a href="https://scholar.google.com/citations?hl=en&user=ylKFMAkAAAAJ">[Google Scholar]</a>
-    <a href="https://github.com/TarzanZhao">[GitHub]</a>
-    <a href="https://www.linkedin.com/in/hexu-zhao-203304244/">[LinkedIn]</a>
+        <div class="info">
+            Email: hz3496 [at] nyu [dot] edu<br>
+            <br>
+            <a href="https://scholar.google.com/citations?hl=en&user=ylKFMAkAAAAJ">[Google Scholar]</a>
+            <a href="https://github.com/TarzanZhao">[GitHub]</a>
+            <a href="https://www.linkedin.com/in/hexu-zhao-203304244/">[LinkedIn]</a>
+        </div>
+    </div>
+
+    <div class="ai-proxy-box">
+        <div>
+            <span class="ai-proxy-title">Ask my AI proxy</span>
+            <span class="ai-proxy-subtitle">(it knows me pretty well)</span>
+        </div>
+        <div id="ai-proxy-messages" class="ai-proxy-messages">
+            <div id="ai-proxy-suggestion" class="ai-proxy-message ai-proxy-suggestion">
+<span class="speaker">You:</span> what's your favorite color?
+<span class="speaker">Hexu:</span> Black. It is simple :)
+...
+            </div>
+        </div>
+        <div class="ai-proxy-input-row">
+            <input id="ai-proxy-input" type="text" placeholder="Type your question...">
+            <button id="ai-proxy-send" type="button">Ask</button>
+        </div>
+    </div>
 </div>
 
 <div class="tabs">
@@ -175,6 +309,119 @@ Previously, I obtained my bachelor's degree in 2023 from Honored Yao Class, Tsin
 </div>
 
 <script>
+const AI_PROXY_API_BASE =
+    window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+        ? "http://localhost:3001"
+        : "https://hexuzhao2001.duckdns.org";
+const aiProxySessionId = (
+    window.crypto && window.crypto.randomUUID
+        ? window.crypto.randomUUID()
+        : String(Date.now())
+);
+const aiProxyMessages = [];
+
+function escapeHtml(text) {
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+}
+
+function addAiProxyMessage(role, text) {
+    const messagesEl = document.getElementById("ai-proxy-messages");
+    const suggestionEl = document.getElementById("ai-proxy-suggestion");
+    if (suggestionEl) suggestionEl.remove();
+    const messageEl = document.createElement("div");
+    messageEl.className = "ai-proxy-message";
+    messageEl.innerHTML = '<span class="speaker">' + (role === "user" ? "You" : "Hexu") + ':</span> ' + escapeHtml(text);
+    messagesEl.appendChild(messageEl);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+}
+
+function updateAiProxyMessage(messageEl, role, text) {
+    messageEl.innerHTML = '<span class="speaker">' + (role === "user" ? "You" : "Hexu") + ':</span> ' + escapeHtml(text);
+}
+
+function setAiProxyBusy(isBusy) {
+    const sendButton = document.getElementById("ai-proxy-send");
+    const input = document.getElementById("ai-proxy-input");
+    sendButton.disabled = isBusy;
+    input.disabled = isBusy;
+    sendButton.textContent = isBusy ? "Thinking..." : "Ask";
+}
+
+async function pollAiProxyStatus(id) {
+    for (let attempt = 0; attempt < 60; attempt += 1) {
+        const response = await fetch(AI_PROXY_API_BASE + "/api/status/" + encodeURIComponent(id));
+        const data = await response.json();
+
+        if (data.status === "done") {
+            return data.text || "";
+        }
+
+        if (data.status === "error") {
+            throw new Error(data.error || "AI proxy failed.");
+        }
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+    }
+
+    throw new Error("AI proxy timed out.");
+}
+
+async function sendAiProxyQuestion() {
+    const input = document.getElementById("ai-proxy-input");
+    const question = input.value.trim();
+    if (!question) return;
+
+    input.value = "";
+    addAiProxyMessage("user", question);
+    const thinkingMessageEl = document.createElement("div");
+    thinkingMessageEl.className = "ai-proxy-message";
+    thinkingMessageEl.innerHTML = '<span class="speaker">Hexu:</span> thinking<span class="thinking-dots"><span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></span>';
+    document.getElementById("ai-proxy-messages").appendChild(thinkingMessageEl);
+    document.getElementById("ai-proxy-messages").scrollTop = document.getElementById("ai-proxy-messages").scrollHeight;
+    aiProxyMessages.push({ role: "user", content: question });
+    setAiProxyBusy(true);
+
+    try {
+        const response = await fetch(AI_PROXY_API_BASE + "/api/chat", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                question,
+                sessionId: aiProxySessionId
+            })
+        });
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(data.error || "Request failed.");
+        }
+
+        const answer = await pollAiProxyStatus(data.id);
+        aiProxyMessages.push({ role: "assistant", content: answer });
+        updateAiProxyMessage(thinkingMessageEl, "assistant", answer);
+    } catch (error) {
+        console.error(error);
+        updateAiProxyMessage(thinkingMessageEl, "assistant", "Sorry, the AI proxy is unavailable right now.");
+    } finally {
+        setAiProxyBusy(false);
+        input.focus();
+    }
+}
+
+document.getElementById("ai-proxy-send").addEventListener("click", sendAiProxyQuestion);
+document.getElementById("ai-proxy-input").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        sendAiProxyQuestion();
+    }
+});
+document.getElementById("ai-proxy-suggestion").addEventListener("click", function() {
+    document.getElementById("ai-proxy-input").value = "What's your favorite color?";
+    document.getElementById("ai-proxy-input").focus();
+});
+
 function switchTab(tab) {
     document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
     document.querySelectorAll('.tabs a').forEach(el => el.classList.remove('active'));
